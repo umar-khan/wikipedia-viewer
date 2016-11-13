@@ -1,7 +1,7 @@
 $(document).ready(function () {
   
   var searchResults = [];
-  var random;
+  var random = "";
   var input = "";
   
   function search() {
@@ -41,7 +41,7 @@ $(document).ready(function () {
   
   
   search();
-  randomSearch();
+  $("#randomSearchButton").on("click", randomSearch);
 });
 
 
