@@ -45,7 +45,7 @@ $(document).ready(function () {
     // Pass value of input textbox to search  function
     search($("#searchBox").val());
   });
-  // Trigger search function if user presses ENTER in textbox
+  // Trigger search function by imitating button click if user presses ENTER in textbox
   $("#searchBox").keypress(function (event) {
     if (event.keyCode === 13) {
       $("#searchButton").click();
