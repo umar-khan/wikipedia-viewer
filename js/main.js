@@ -4,13 +4,14 @@ $(document).ready(function () {
   var random = "";
   var input = "";
   
-  function search() {
-    // Use Wikipedia API to return 10 search results.
+  function search(query) {
+    // Use Wikipedia API to return 10 search results based on input
     // Results are returned as an array
-    $.getJSON("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=game&callback=?", function (json) {
+    $.getJSON("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&callback=?&search=" + query, function (json) {
       
       // Store search results in searchResults array
       searchResults = json;
+      console.log(query);
       
       // Call function to show results
       showResults();
@@ -39,9 +40,22 @@ $(document).ready(function () {
     
   }
   
+  // Trigger search function when search button is clicked
+  $("#searchButton").on("click", function () {
+    // Pass value of input textbox to search  function
+    search($("#searchBox").val());
+  });
+  // Trigger search function if user presses ENTER in textbox
+  $("#searchBox").keypress(function (event) {
+    if (event.keyCode === 13) {
+      $("#searchButton").click();
+    }
+  });
   
-  search();
+  // Trigger randomSearch function when random search button is clicked
   $("#randomSearchButton").on("click", randomSearch);
+  
+  
 });
 
 
