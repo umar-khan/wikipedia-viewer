@@ -10,7 +10,9 @@
     <!-- Bootstrap v3.3.7 -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    
+    <!-- My custom CSS -->
+    <link rel="stylesheet" href="css/myStyles.css">
   </head>
   
   
@@ -31,16 +33,16 @@
           </div>
         </div>
       </div>
-
-
-      <div>
-        <p id="searchResults"></p>
-        <br>
-        <p>------------------------</p>
-        <br>
-        <p id="randomResults"></p>
-
+      
+      <!-- Bootstrap list group for search results -->
+      <div id="results" class="list-group">
+        <!-- Hidden template list item -->
+        <a href="#" class="list-group-item template">
+          <h4 class="list-group-item-heading"></h4>
+          <p class="list-group-item-text"></p>
+        </a>
       </div>
+      
     </div>
     
     <!-- jQuery v1.12.4 (necessary for Bootstrap's JavaScript plugins) -->
