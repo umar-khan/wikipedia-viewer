@@ -1,3 +1,14 @@
 .template {
-  display: none
+  display: none;
+}
+
+body {
+  background-color: #3e2723;
+}
+
+h1 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: #efebe9;
+  font-family: Times, Georgia, Linux Libertine, Cambria, serif
 }
