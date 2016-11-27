@@ -30,6 +30,11 @@
   float: none;
 }
 
+a:hover {
+  background-color: #d7ccc8 !important;
+  border-left: solid;
+}
+
 body {
   background-color: #3e2723;
 }
