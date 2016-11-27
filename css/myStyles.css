@@ -1,14 +1,19 @@
 #header{
-  padding-top: 70px !important;
-  padding-bottom: 20px;
+  padding-top: 10%;
+  padding-bottom: 4%;
 }
 
 #logoGlobe {
   padding-right: 0px;
 }
 
-#logoText{
-  padding-left: 0px;
+#results {
+  padding-top: 3%;
+}
+
+.container {
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 .img-responsive{
@@ -27,11 +32,4 @@
 
 body {
   background-color: #3e2723;
-}
-
-h1 {
-  padding-bottom: 50px;
-  padding-top: 50px;
-  color: #efebe9;
-  font-family: Times, Georgia, Linux Libertine, Cambria, serif
 }
