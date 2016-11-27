@@ -73,6 +73,14 @@ $(document).ready(function () {
     
   }
   
+  // Place cursor in search box on page load
+  $("#searchBox").focus();
+  
+  // Unfocus buttons after they are pressed
+  $(".btn").mouseup(function() {
+    $(this).blur();
+  });
+  
   // Trigger search function when search button is clicked
   $("#searchButton").on("click", function () {
     // Pass value of input textbox to search  function
@@ -81,6 +89,7 @@ $(document).ready(function () {
   // Trigger search function by imitating button click if user presses ENTER in textbox
   $("#searchBox").keypress(function (event) {
     if (event.keyCode === 13) {
+      $(this).blur();
       $("#searchButton").click();
     }
   });
