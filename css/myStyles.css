@@ -1,5 +1,28 @@
+#header{
+  padding-top: 70px !important;
+  padding-bottom: 20px;
+}
+
+#logoGlobe {
+  padding-right: 0px;
+}
+
+#logoText{
+  padding-left: 0px;
+}
+
+.img-responsive{
+  max-width: 90%;
+}
+
 .template {
   display: none;
+}
+
+.vCenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 body {
