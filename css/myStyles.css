@@ -44,6 +44,11 @@
   float: none;
 }
 
+input:focus {
+  box-shadow: 0px 0px 1px 1px rgba(215,204,200,1) !important;
+  border: 1px solid #3e2723 !important;
+}
+
 a:hover {
   background-color: #d7ccc8 !important;
   border-left: solid;
