@@ -81,6 +81,11 @@ $(document).ready(function () {
     $(this).blur();
   });
   
+  // Initialize all tooltips on website
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  
   // Trigger search function when search button is clicked
   $("#searchButton").on("click", function () {
     // Pass value of input textbox to search  function
