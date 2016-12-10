@@ -1,15 +1,16 @@
 $(document).ready(function () {
   
   function search(query) {
-    // Use Wikipedia API to return 10 search results based on input
+    // Takes text in textbox and queries Wikipedia API for 10 search results
     // Results are returned as an array
+    // Format of results = [Query, [Titles], [Descriptions], [URLs]]
     $.getJSON("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&callback=?&search=" + query, function (json) {
       
       var titles = [];
       var descriptions = [];
       var urls = [];
       
-      // Store article Titles, Descriptions, and URLs, in arrays
+      // Store all article Titles, Descriptions, and URLs, in arrays
       titles = json[1];
       descriptions = json[2];
       urls = json[3];
@@ -52,11 +53,12 @@ $(document).ready(function () {
   }
   
   function showResults(resultsArray) {
+    // Takes input array and displays it on page using hidden template
     
-    // Remove any visible result items
+    // Remove any visible results from previous query
     $(".listItem").remove();
     
-    //
+    // Creates and displays list item for each item in input array
     for (var i = 0; i < resultsArray[0].length; i++) {
       var listItem = $(".template").clone();
       listItem.removeClass("template");
@@ -76,7 +78,7 @@ $(document).ready(function () {
   // Place cursor in search box on page load
   $("#searchBox").focus();
   
-  // Unfocus buttons after they are pressed
+  // Unfocus buttons after they are clicked
   $(".btn").mouseup(function() {
     $(this).blur();
   });
@@ -101,7 +103,6 @@ $(document).ready(function () {
   
   // Trigger randomSearch function when random search button is clicked
   $("#randomSearchButton").on("click", randomSearch);
-  
   
 });
 

@@ -26,24 +26,39 @@
     
     <div class="container">
       
-      
+      <!-- Wikipedia globe logo and title font image -->
       <div>
         <div id="header" class="row">
+          
+          <!-- Globe logo -->
           <div id="logoGlobe" class="col-xs-offset-1 col-xs-2 vCenter">
             <img class="img-responsive" src="images/wikipedia_ball_logo.png" height="100px">
           </div><!--
-          --><div id="logoText" class="col-xs-8 vCenter">
+          -->
+          
+          <!-- Wikipedia title text iamge -->
+          <div id="logoText" class="col-xs-8 vCenter">
             <img class="img-responsive" src="images/Wikipedia-logo-wordmark.png" height="100px">
           </div>
         </div>
       </div>
 
+      <!-- Search bar and buttons -->
       <div class="row">
         <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
           <div class="input-group">
+            
+            <!-- Search textbox -->
             <input id="searchBox" type="text" class="form-control" placeholder="Search for...">
+            
+            <!-- Buttons -->
             <span class="input-group-btn">
-              <button id="searchButton" class="btn btn-default" type="button">Search!</button>
+              <!-- Search button -->
+              <button id="searchButton" class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+              
+              <!-- Random search button -->
               <button id="randomSearchButton" class="btn btn-default" type="button" data-toggle="tooltip" data-container="body" data-delay='{"show": 500, "hide": 100}' title="Random">
                 <span class="glyphicon glyphicon-random"></span>
               </button>
@@ -52,9 +67,10 @@
         </div>
       </div>
       
+      <!-- List of search results -->
       <div class="row">
         <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-      <!-- Bootstrap list group for search results -->
+          <!-- Bootstrap list group for search results -->
           <div id="results" class="list-group">
             <!-- Hidden template list item -->
             <a href="#" class="list-group-item template">
